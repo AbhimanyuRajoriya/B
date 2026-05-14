@@ -18,4 +18,5 @@ app.UseSwaggerUI();
 
 app.MapControllers();
 
+app.Urls.Add("http://0.0.0.0:10000");
 app.Run();

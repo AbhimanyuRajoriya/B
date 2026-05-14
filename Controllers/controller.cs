@@ -65,14 +65,19 @@ namespace Bank.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult deleteUser(int id)
+        public IActionResult DeleteUser(int id)
         {
-            var acc = _context.Accounts.FirstOrDefault(a=>a.Id ==id);
-            if(acc == null)
-                return BadRequest();
+            var acc = _context.Accounts.FirstOrDefault(a => a.Id == id);
+            if (acc == null)
+            {
+                return NotFound();
+            }
+
             _context.Accounts.Remove(acc);
             _context.SaveChanges();
-            return Ok(acc);
+
+            return NoContent();
         }
+
     }
 }

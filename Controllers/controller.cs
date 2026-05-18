@@ -2,7 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 
 using Bank.Data;
 using Bank.Model;
-using Bank.depDto;using Bank.wtdDto;
+using Bank.depDto;
+using Bank.wtdDto;
 
 namespace Bank.Controllers
 {
